@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="css-circular-prog-bar.css">
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
@@ -27,23 +27,23 @@
          </span>
         </div>
     </div>
-</nav>
+</nav> -->
 <div class="container">
     <section id="main">
-        <h3 class="title bold text-center">See your Free Credit Score & $1 Credit Report in minutes</h3>
+        <!-- <h3 class="title bold text-center">See your Free Credit Score & $1 Credit Report in minutes</h3> -->
         <div class="row">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
                         <div class="col-md-12 d-flex progress-circle-bar">
-                            <div class="progress-circle over50 p66">
-                                <span>2 Of 3</span>
+                            <div class="progress-circle p33">
+                                <span>1 Of 3</span>
                                 <div class="left-half-clipper">
                                     <div class="first50-bar"></div>
                                     <div class="value-bar"></div>
                                 </div>
                             </div>
-                            <p class="text-large mt-4"><span class="bold">STEP 3</span><br>View your credit score</p>
+                            <p class="text-large mt-4"><span class="bold">STEP 1</span><br>Tell us about yourself</p>
                             <!-- <div class="wrapper-progressBar">
                         <ul class="progressBar">
                            <li class="active">Tell us about yourself</li>
@@ -65,15 +65,80 @@
                         </div>
                         <div class="col-md-8 offset-md-2">
                             <form name="paymentform" action="/google.com" method="get">
-                                <div class="form-group custom-input-group">
-                                    <label for="email">Email Address </label>
-                                    <input type="text" class="form-control w-100" id="email" name="email" placeholder="example@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" title="Your email should be in the format of example@gmail.com." autocomplete="email">
+                                <h3 class="text-center border-bottom">Personal</h3>
+                                <div class="form-group">
+                                    <label for="fname">First name </label>
+                                    <input type="text" class="form-control w-100 pt-3 pb-3" id="fname" name="fname" placeholder="Jon" required title="Please use a valid first name." autocomplete="fname">
                                 </div>
-                                <div class="form-group custom-input-group">
-                                    <label for="password">Create Password</label>
-                                    <input type="password" class="form-control w-100" placeholder="***************" id="password" name="password" autocomplete="password" title="Use password length of 8-15 with letters and numbers only." maxlength="15" required>
+                                <div class="form-group mt-2">
+                                    <label for="lname">Last name</label>
+                                    <input type="text" class="form-control w-100 pt-3 pb-3" placeholder="Doe" id="lname" name="lname" autocomplete="lname" title="Please use a valid last name." required>
                                 </div>
+                                <h3 class="text-center border-bottom mt-3">Address</h3>
+                                <div class="form-group">
+                                    <label for="address">Street address</label>
+                                    <input type="text" class="form-control w-100 pt-3 pb-3" placeholder="" id="address" name="address" autocomplete="address" title="Please use a valid address." required>
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label for="unitnumber">Unit Number</label>
+                                    <input type="text" style="width: 90px !important;" class="form-control w-100 pt-3 pb-3" maxlength="5" placeholder="00000" id="unitnumber" name="unitnumber" autocomplete="unitnumber" title="Please use a valid unit number." required>
+                                </div>
+                                <h3 class="text-center border-bottom mt-3">Verification Information</h3>
+                                <h6 class="bold">Date of birthday</h6>
                                 <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="month">Month</label>
+                                            <!-- <select class="w-100 form-select pt-3 pb-3" aria-label="Default select example" required>
+                                                <option selected class="selected"></option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select> -->
+                                            <input type="text" class="form-control pt-3 pb-3" maxlength="2" placeholder="00" id="month" name="month" autocomplete="month" title="Please use a valid address." required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="day">Day</label>
+                                            <!-- <select class="w-100 form-select pt-3 pb-3" aria-label="Default select example" required>
+                                                <option selected class="selected">Select</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select> -->
+                                            <input type="text" class="form-control w-100 pt-3 pb-3" maxlength="2" placeholder="00" id="day" name="day" autocomplete="day" title="Please use a valid address." required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="year">Year</label>
+                                            <!-- <select class="w-100 form-select pt-3 pb-3" aria-label="Default select example" required>
+                                                <option selected class="selected">Select</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select> -->
+                                            <input type="text" class="form-control w-100 pt-3 pb-3" maxlength="4" placeholder="0000" id="year" name="year" autocomplete="year" title="Please use a valid address." required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-2">
+                                    <label for="securitynumber">Social Security Number</label>
+                                    <input type="text" style="width: 90px !important;" class="form-control w-100 pt-3 pb-3" maxlength="5" placeholder="00000" id="securitynumber" name="securitynumber" autocomplete="securitynumber" title="Please use a valid social security number." required>
+                                </div>
+                                <div class="row mt-3" style="padding: .75rem;">
+                                    <button type="submit" id="myBtn" class="btn text-white btn-lg btn-custom btn-block mb-2 bold">Next</button>
+                                </div>
+                                <div style="border-bottom: 1px solid #ccc;">
+                                    <p class="p-0 mb-2 address-para" style="color: dodgerblue; font-weight: bolder;">Your Social Security Number is needed to match your credit file.</p>
+                                    <p class="p-0 mb-2 address-para" style="color: dodgerblue; font-weight: bolder;">We do not store it anywhere.</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="p-0 mb-2 address-para">I acknowledge that I have read the Terms of Service and Privacy Notice, and that I agree to their terms. I understand that the Terms of Service contain an Arbitration Clause.</p>
+                                    <p class="p-0 mb-2 address-para">By clicking on the “Submit & Continue” button below, you are providing written instructions to TransUnion Interactive, Inc. authorizing TransUnion Interactive, Inc. to obtain and use, on a recurring basis with your membership, personal information you provide during the enrollment process, as well as information from your credit profiles at TransUnion, Experian and/or Equifax®, to confirm your identity, display your credit data to you and provide you with personalized offers from TransUnion’s partners that are based on your personal information and credit profiles.</p>
+                                </div>
+                                <!-- <div class="row">
                                     <div class="col-12">
                                         <div class="border-wrapper no-border" id="marge-input">
                                             <div class="marge-input">
@@ -133,8 +198,8 @@
                                                 <div class="safe-head mb-2 mt-3">
                                                     <img src="./img/lock.png" class="img-fluid" alt="">
                                                     <p class="mb-0 mx-3 py-3 safe-para">Guaranteed <b>Safe & Secure</b> Checkout</p>
-                                                    <!-- <button class="btn btn-stripe"><img src="./img/Vector.png" alt=""></button> -->
-                                                    <!-- <img src="./img/Vetor-blue.png" alt=""> -->
+                                                    <button class="btn btn-stripe"><img src="./img/Vector.png" alt=""></button>
+                                                    <img src="./img/Vetor-blue.png" alt="">
                                                 </div>
                                                 <div class="safe-body mb-4">
                                                     <a class="credit-card mr-3">
@@ -157,8 +222,8 @@
                                         </div>
                                         <p class="error-msg d-none">The card number must be 12-19 digits long.</p>
                                     </div>
-                                </div>
-                                <div class="row">
+                                </div> -->
+                                <!-- <div class="row">
                                     <div class="col-12">
                                         <div class="form-group custom-input-group">
                                             <label for="nameOnCard">Card Holder's Name</label>
@@ -228,14 +293,14 @@
                                     Now!</button>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="alert alert-success text-center" role="alert">
+            <div class="col-md-4 left-section">
+                <!-- <div class="alert alert-success text-center" role="alert">
                     <div class="row">
                         <div class="col-md-3">
                             <img src="https://credit-nerd.com/assets/img/CreditNerd_LOCK.png">
@@ -244,8 +309,8 @@
                             <h5 class="text-left bold">Safe & Secure</h5>
                         </div>
                     </div>
-                </div>
-                <div class="row">
+                </div> -->
+                <!-- <div class="row">
                     <div class="col-md-2"><br />
                     </div>
                     <div class="col-md-8 text-center middle-logo">
@@ -255,7 +320,7 @@
                     </div>
                     <div class="col-md-2"><br />
                     </div>
-                </div>
+                </div> -->
                 <div class="row">
                     <div class="col-md-2 text-center">
                         <img src="https://credit-nerd.com/assets/img/CreditNerd_check_shield.png">

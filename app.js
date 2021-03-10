@@ -1,5 +1,5 @@
 window.onload = function() {
-  document.getElementById("email").focus();
+  document.getElementById("fname").focus();
 }
 $(".click-image").on("click", function () {
   $(".card-outer").toggleClass("d-none");
@@ -40,12 +40,36 @@ $(document).ready(function () {
   });
 });
 
-document.getElementById("cardNumber").addEventListener("input", function (e) {
+document.getElementById("unitnumber").addEventListener("input", function (e) {
   e.target.value = e.target.value
     .replace(/[^\dA-Z]/g, "")
-    .replace(/(.{4})/g, "$1 ")
     .trim();
 });
+
+document.getElementById("month").addEventListener("input", function (e) {
+  e.target.value = e.target.value
+    .replace(/[^\dA-Z]/g, "")
+    .trim();
+});
+
+document.getElementById("day").addEventListener("input", function (e) {
+  e.target.value = e.target.value
+    .replace(/[^\dA-Z]/g, "")
+    .trim();
+});
+
+document.getElementById("year").addEventListener("input", function (e) {
+  e.target.value = e.target.value
+    .replace(/[^\dA-Z]/g, "")
+    .trim();
+});
+
+document.getElementById("securitynumber").addEventListener("input", function (e) {
+  e.target.value = e.target.value
+    .replace(/[^\dA-Z]/g, "")
+    .trim();
+});
+
 $(".one").hide();
 $("input:radio").change(function () {
   if ($(this).val() == "option1") {
